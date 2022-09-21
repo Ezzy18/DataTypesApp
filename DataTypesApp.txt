@@ -1,0 +1,26 @@
+
+using System;
+
+namespace DataTypesApp
+{
+ public class DataTypesProgram
+{
+    public static void Main(string[] args)
+    {
+        Console.Write ("Enter the pieces of apple: ");
+        int pieces = Convert.ToInt32(Console.ReadLine());
+        Console.Write ("Enter the total price of " + pieces + " apple(s): ");
+        
+        decimal totalPrice  = Convert.ToDecimal(Console.ReadLine());
+        decimal roundPrice = Math.Round(totalPrice,1);
+        decimal convertedTotalPrice = Math.Truncate(totalPrice);
+
+        
+        Console.WriteLine ("The total price of " + pieces + " apple(s) is: " + totalPrice);
+        Console.WriteLine ("The value of original price is " + roundPrice );
+        Console.WriteLine ("The value of converted price is " + convertedTotalPrice);
+        Console.Write ("Press any key to exit... ");
+        Console.ReadKey();
+    }
+}    
+}
